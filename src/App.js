@@ -13,8 +13,6 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-
-
 const dark = createTheme({
   palette: {
     mode: 'dark',
@@ -35,6 +33,7 @@ const theme = createTheme({
   },
 });
 export default function SignIn() {
+  function dummyInput() {}
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -47,17 +46,11 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-          </Avatar>
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}></Avatar>
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Box
-            component="form"
-            onSubmit={}
-            noValidate
-            sx={{ mt: 1 }}
-          >
+          <Box component="form" onSubmit={dummyInput} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
